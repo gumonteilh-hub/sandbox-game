@@ -1,5 +1,6 @@
 body {
-  background-color: greenyellow;
+  background: url('/src/assets/GrassBackground.png'), repeat;
+  background-color: green;
 }
 
 .tree {
@@ -20,6 +21,7 @@ body {
   padding: 0 10px;
   border-radius: 5px;
   border: solid 2px orange;
+  z-index: 101;
 }
 
 .scoreIcon {

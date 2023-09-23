@@ -6,36 +6,37 @@ import { ResourceContext, ResourceContextType } from '../services/resourceContex
 interface ITreeProps {
     top: number;
     left: number;
+    zIndex: number;
 }
 
-const Tree = ({ top, left }: ITreeProps) => {
+const Tree = ({ top, left, zIndex }: ITreeProps) => {
 
     const [chopable, setChopable] = useState(true);
 
-    const {logQuantity, updateLogQuantity} = React.useContext(ResourceContext) as ResourceContextType;
+    const { logQuantity, updateLogQuantity } = React.useContext(ResourceContext) as ResourceContextType;
 
     const handleClick = () => {
         setChopable(false);
         updateLogQuantity(logQuantity + 1)
     }
 
-    useEffect(()=> {
-        const grow = setTimeout(()=> {
+    useEffect(() => {
+        const grow = setTimeout(() => {
             setChopable(true);
         }, 10000)
 
-        return ()=> {
+        return () => {
             clearTimeout(grow);
         }
 
     }, [chopable])
 
     return <>
-        {chopable ? 
-            <img className='tree chopable' onClick={handleClick} style={{ position: 'absolute', top: top, left: left }} src={Tree1} /> 
+        {chopable ?
+            <img className='tree chopable' onClick={handleClick} style={{ position: 'absolute', bottom: top, right: left, zIndex: zIndex }} src={Tree1} />
             :
-            <img className='tree' style={{ position: 'absolute', top: top, left: left }} src={ChopedTree1} /> 
-     }
+            <img className='tree' style={{ position: 'absolute', bottom: top, right: left, zIndex: zIndex }} src={ChopedTree1} />
+        }
 
     </>
 }
