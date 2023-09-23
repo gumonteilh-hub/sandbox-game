@@ -1,11 +1,12 @@
 import './App.css'
+import Tree from './components/Tree'
 
 function App() {
 
   return (
-    <>
-    Helloworld
-    </>
+    <div style={{ backgroundColor: 'red' }}>
+      <Tree top={500} left={600} />
+    </div>
   )
 }
 
