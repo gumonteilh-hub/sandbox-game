@@ -10,3 +10,25 @@ body {
   box-shadow: 0px 0px 15px white; */
   cursor: url('./assets/axe.png'), pointer;
 }
+
+.scoreboard {
+  background-color: yellow;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  /* width: 100px; */
+  padding: 0 10px;
+  border-radius: 5px;
+  border: solid 2px orange;
+}
+
+.scoreIcon {
+  width: 50px;
+}
+
+.scoreCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}

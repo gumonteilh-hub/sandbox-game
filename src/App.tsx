@@ -1,12 +1,16 @@
 import './App.css'
 import Tree from './components/Tree'
+import Scoreboard from './scenes/Scoreboard'
+import ResourceProvider from './services/resourceContext'
 
 function App() {
 
   return (
-    <div style={{ backgroundColor: 'red' }}>
+    <ResourceProvider>
+      <Scoreboard/>
       <Tree top={500} left={600} />
-    </div>
+
+    </ResourceProvider>
   )
 }
 
