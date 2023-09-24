@@ -6,7 +6,7 @@ body {
 .tree {
   border-radius: 50%;
 }
-.tree:hover {
+.chopable:hover {
   /* background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0px 0px 15px white; */
   cursor: url('./assets/axe.png'), pointer;
@@ -33,4 +33,84 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.shopLocation {
+  position: fixed;
+  top : 25px;
+  right: 25px;
+  background-color: yellow;
+  z-index: 101;
+
+  button:hover {
+    border: 0;
+  }
+  
+  button {
+    transition: none;
+    border: 0;
+  }
+}
+
+.openShopButton {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+
+  img {
+    height: 20px;
+    aspect-ratio: 1;
+  }
+}
+
+
+.river {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background-image: url('/src/assets/river.gif');
+}
+
+.shop {
+  height: 600px;
+  width: 350px;
+  border-radius: 10px;
+  border: solid 2px orange;
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.bridge {
+  position: absolute;
+  top: 200px;
+  right: -300px;
+  height: 200px;
+  width: 500px;
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .articleImage {
+    width: 200px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button:disabled {
+    background-color: grey;
+    cursor:not-allowed;
+  }
+
 }
