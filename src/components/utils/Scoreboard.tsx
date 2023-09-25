@@ -1,7 +1,4 @@
-import React from 'react';
-import { GameContext, GameContextType } from '../../scenes/forest/services/GameContext';
 import Score, { IScoreProps } from '../Score';
-import Log from '/src/assets/log.png';
 
 interface IScoreboardProps {
     scoreList: IScoreProps[];

@@ -6,6 +6,7 @@ import Tree from './components/Tree';
 import BridgeImg from './assets/bridge.png'
 import LogImg from './assets/log.png'
 import { GameContext, GameContextType } from './services/GameContext';
+import { Link } from 'react-router-dom';
 
 interface Ipos {
   x: number;
@@ -49,7 +50,7 @@ function Forest() {
       }
 
       <div className='river' />
-      {bridgeBuilt && <img className='bridge' src={BridgeImg} />}
+      {bridgeBuilt && <Link to='/mines' ><img className='bridge' src={BridgeImg} /> </Link>}
     </>
   )
 }

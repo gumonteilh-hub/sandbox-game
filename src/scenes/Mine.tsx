@@ -3,7 +3,7 @@
 const Mine = () => {
 
 
-    return <p> Mines are here</p>
+    return <p>Coming soon !</p>
 }
 
 export default Mine;

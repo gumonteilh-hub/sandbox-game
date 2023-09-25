@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 body {
   background: url('./assets/GrassBackground.png'), repeat;
   background-color: green;
@@ -6,9 +10,8 @@ body {
 .tree {
   border-radius: 50%;
 }
+
 .chopable:hover {
-  /* background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 0px 15px white; */
   cursor: url('./assets/axe.png'), pointer;
 }
 
@@ -17,7 +20,6 @@ body {
   position: fixed;
   top: 25px;
   left: 25px;
-  /* width: 100px; */
   padding: 0 10px;
   border-radius: 5px;
   border: solid 2px orange;
@@ -37,7 +39,7 @@ body {
 
 .shopLocation {
   position: fixed;
-  top : 25px;
+  top: 25px;
   right: 25px;
   background-color: yellow;
   z-index: 101;
@@ -45,7 +47,7 @@ body {
   button:hover {
     border: 0;
   }
-  
+
   button {
     transition: none;
     border: 0;
@@ -78,6 +80,7 @@ body {
   width: 350px;
   border-radius: 10px;
   border: solid 2px orange;
+
   h1 {
     width: 100%;
     text-align: center;
@@ -90,6 +93,10 @@ body {
   right: -300px;
   height: 200px;
   width: 500px;
+}
+
+.bridge:hover {
+  cursor: url('../../assets/arrow.png'), pointer;
 }
 
 .article {
@@ -110,7 +117,7 @@ body {
 
   button:disabled {
     background-color: grey;
-    cursor:not-allowed;
+    cursor: not-allowed;
   }
 
 }
