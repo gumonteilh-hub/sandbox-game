@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useMemo } from 'react'
 import './App.css'
 import Tree from './components/Tree'
 import Scoreboard from './scenes/Scoreboard'
@@ -13,9 +13,7 @@ interface Ipos {
 
 function App() {
 
-  const [treePos, setTreePos] = useState<Ipos[]>([])
-
-  useEffect(()=> {
+  const treePos : Ipos[] =  useMemo(()=> {
     const tmpTreePos : Ipos[] = [];
     for(let i =0; i < 100; i++) {
       tmpTreePos.push({y : Math.random()*(window.innerHeight - 120), x: Math.random()*(window.innerWidth-270)});
@@ -23,7 +21,7 @@ function App() {
 
     tmpTreePos.sort((a,b) => b.y - a.y)
 
-    setTreePos(tmpTreePos);
+    return tmpTreePos;
   }, [])
 
   return (

@@ -5,13 +5,13 @@ import Log from '/src/assets/log.png';
 
 const Article = () => {
 
-    const { bridgeBuilt, logQuantity, setBridgeBuilt, updateLogQuantity } = useContext(GameContext) as GameContextType;
+    const { bridgeBuilt, logQuantity, updateBridgeBuilt, updateLogQuantity } = useContext(GameContext) as GameContextType;
 
 
     const handleClick = () => {
         if(logQuantity >= 300) {
             updateLogQuantity(logQuantity- 300); 
-            setBridgeBuilt(true)
+            updateBridgeBuilt(true)
         } else {
             alert('Tu n\'as pas assez de buches pour construire le pont');
         }
