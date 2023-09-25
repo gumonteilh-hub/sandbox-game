@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Tree1 from '/src/assets/Tree1.png';
-import ChopedTree1 from '/src/assets/ChopedTree1.png';
+import Tree1 from '../assets/Tree1.png';
+import ChopedTree1 from '../assets/ChopedTree1.png';
 import { GameContext, GameContextType } from '../services/GameContext';
 
 interface ITreeProps {

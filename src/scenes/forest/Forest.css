@@ -1,5 +1,5 @@
 body {
-  background: url('/src/assets/GrassBackground.png'), repeat;
+  background: url('./assets/GrassBackground.png'), repeat;
   background-color: green;
 }
 
@@ -70,7 +70,7 @@ body {
   right: 0;
   width: 200px;
   height: 100vh;
-  background-image: url('/src/assets/river.gif');
+  background-image: url('./assets/river.gif');
 }
 
 .shop {

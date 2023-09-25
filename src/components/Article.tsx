@@ -1,25 +1,18 @@
-import { useContext } from 'react';
-import {GameContext, GameContextType } from '../services/GameContext';
-import Bridge from '/src/assets/bridge.png'
-import Log from '/src/assets/log.png';
+import { MouseEventHandler} from 'react';
 
-const Article = () => {
+export interface IArticleProps {
+    price: number;
+    imageUrl: string;
+    target: string
+    enabled?: boolean;
+    handleClick: MouseEventHandler<HTMLButtonElement>;
+}
 
-    const { bridgeBuilt, logQuantity, updateBridgeBuilt, updateLogQuantity } = useContext(GameContext) as GameContextType;
-
-
-    const handleClick = () => {
-        if(logQuantity >= 300) {
-            updateLogQuantity(logQuantity- 300); 
-            updateBridgeBuilt(true)
-        } else {
-            alert('Tu n\'as pas assez de buches pour construire le pont');
-        }
-    }
+const Article = ({price, imageUrl, handleClick, enabled, target}: IArticleProps) => {
 
     return <div className='article'>
-        <img className='articleImage' src={Bridge} />
-        <button disabled={bridgeBuilt} onClick={handleClick} > <span>300</span> <img className='scoreIcon' src={Log} />
+        <img className='articleImage' src={target} />
+        <button disabled={!enabled} onClick={handleClick} > <span>{price}</span> <img className='scoreIcon' src={imageUrl} />
         </button>
     </div>
 }
